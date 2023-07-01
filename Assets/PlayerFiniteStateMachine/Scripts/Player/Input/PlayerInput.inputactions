@@ -1,8 +1,8 @@
 {
-    "name": "Player",
+    "name": "PlayerInput",
     "maps": [
         {
-            "name": "Gameplay",
+            "name": "Controls",
             "id": "6542e976-94f4-4f5c-ab0b-d66016b48c25",
             "actions": [
                 {
@@ -11,7 +11,8 @@
                     "id": "83c26f1b-569b-4eed-844f-e777d6fdd92c",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Jump",
@@ -19,12 +20,13 @@
                     "id": "e1ab88d4-5ba8-4acf-a528-e45b691a4f33",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "WASD",
+                    "name": "AD",
                     "id": "4e3d5d87-989f-4c30-93ea-887205966c6a",
                     "path": "2DVector",
                     "interactions": "",
@@ -33,28 +35,6 @@
                     "action": "Movement",
                     "isComposite": true,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "910d128f-baa7-4ddd-adff-2322be0bdb1a",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "425a2521-0edf-46c6-afb1-1393cc6ab0ad",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 },
                 {
                     "name": "left",
@@ -80,11 +60,11 @@
                 },
                 {
                     "name": "",
-                    "id": "1f3b91ae-6b85-4c8e-ad12-c5b85b3ab3fa",
+                    "id": "4f29bd45-d5bf-4bae-8d08-01562dd1a664",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard",
+                    "groups": "",
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
