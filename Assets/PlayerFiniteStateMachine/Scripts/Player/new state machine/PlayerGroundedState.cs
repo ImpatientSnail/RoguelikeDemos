@@ -10,12 +10,26 @@ public class PlayerGroundedState : PlayerBaseState
         _isRootState = true;
         InitializeSubState();
     }
+
     public override void EnterState() 
     {
         Debug.Log("GROUNDED");
     }
-    public override void UpdateState() { }
+
+    public override void UpdateState()
+    {
+        CheckSwitchStates();
+    }
+
     public override void ExitState() { }
-    public override void CheckSwitchStates() { }
+    
+    public override void CheckSwitchStates()
+    {
+        if (_ctx.IsJumpPressed)
+        {
+            SwitchState(_factory.Jump());
+        }
+    }
+    
     public override void InitializeSubState() { }
 }
