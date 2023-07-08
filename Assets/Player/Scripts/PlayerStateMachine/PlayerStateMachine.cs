@@ -81,7 +81,7 @@ public class PlayerStateMachine : MonoBehaviour
 
     void handleFlip()
     {
-        if (isFacingLeft == true && currentMovementInput.x > 0 || isFacingLeft == false && currentMovementInput.x < 0)
+        if (isFacingLeft && currentMovementInput.x > 0 || !isFacingLeft && currentMovementInput.x < 0)
         {
             isFacingLeft = !isFacingLeft;
             Vector3 localScale = transform.localScale;
